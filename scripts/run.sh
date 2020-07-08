@@ -14,7 +14,7 @@ then
     OUTPUT_DIR=$2
 fi
 
-COREVERSION="latest"
+COREVERSION="armv6"
 if [ $# -gt 2 ]
 then
     COREVERSION=$3
