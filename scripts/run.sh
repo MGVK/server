@@ -141,7 +141,7 @@ function dockerPrune() {
 function updateLetsEncrypt() {
     if [ -d "${OUTPUT_DIR}/letsencrypt/live" ]
     then
-        docker pull certbot/certbot:arm32v6-latest
+        docker pull certbot/certbot:arm64v8-latest
         docker run -i --rm --name certbot -p 443:443 -p 80:80 \
             -v $OUTPUT_DIR/letsencrypt:/etc/letsencrypt/ certbot/certbot:arm64v8-latest \
             renew --logs-dir /etc/letsencrypt/logs
